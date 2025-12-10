@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Simple Notes</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- (expand toggle removed) -->
+
+    <div class="container">
+      <aside class="sidebar">
+        <header class="top">
+          <h1>Notes</h1>
+          <button id="newBtn" title="New note">＋ New</button>
+        </header>
+
+        <div class="search">
+          <input id="searchInput" type="search" placeholder="Search notes..." />
+        </div>
+
+        <div id="notesList" class="notes-list"></div>
+
+        <footer class="footer">
+          <small class="muted">Saved in your browser (localStorage)</small>
+        </footer>
+      </aside>
+
+      <main class="editor">
+        <div id="empty" class="empty">Select a note or create a new one.</div>
+
+        <div id="notePane" class="note-pane hidden">
+          <input id="title" class="title" placeholder="Title" />
+          <textarea
+            id="content"
+            class="content"
+            placeholder="Write your note here..."
+          ></textarea>
+
+          <div class="actions">
+            <div>
+              <button id="saveBtn">Save</button>
+              <button id="deleteBtn" class="danger">Delete</button>
+            </div>
+            <div class="meta" id="meta"></div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
